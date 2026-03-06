@@ -478,14 +478,6 @@ timestamp: ${timestamp}
 {
   "input": "智灵搜索，小米汽车最近7天的头条负面数据",
   "question_name": "小米汽车最近7天的头条负面数据",
-  "other": {
-    "subject": "小米汽车",
-    "source": "头条",
-    "data_type": "数据",
-    "sentiment": "负面",
-    "start_time": "2026-02-25 00:00:00",
-    "end_time": "2026-03-04 23:59:59"
-  }
 }
 ```
 
