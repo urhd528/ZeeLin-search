@@ -21,7 +21,7 @@
 ```json
 {
   "Zeelin_Website_Url": "https://skills.zeelin.cn",
-  "Zeelin_Api_Url": "https://skills.zeelin.cn:5000/api/es/search/natural",
+  "Zeelin_Api_Url": "https://skills.zeelin.cn/v1/api/es/search/natural",
   "Zeelin_Api_Key": ""
 }
 ```
@@ -78,7 +78,7 @@ sign = HMAC-SHA256(Zeelin_Api_Key, Zeelin_Api_Key + timestamp)
 10. **处理响应**：
     - **无论成功或失败，都必须告知用户结果**
     - 成功：
-      - 以人性化格式展示结果（展示前5-10条）
+      - 以人性化格式展示结果
       - **必须把最终所有的搜索结果以文件的形式输出给用户**
     - 失败：以友好方式提示错误信息
 
@@ -223,7 +223,7 @@ timestamp: ${timestamp}
 
 ### 成功结果展示
 
-当API返回成功时，按以下美观格式展示，展示前5条结果：
+当API返回成功时，按以下美观格式展示，展示接口返回的所有结果：
 
 ```
 
@@ -356,9 +356,10 @@ timestamp: ${timestamp}
 
 **输出流程**：
 
-1. 先在对话中展示前5条结果的预览（使用上面的美观格式），数据来源为api接口返回
+1. 先在对话中展示接口返回结果的预览（使用上面的美观格式），数据来源为api接口返回
 2. 然后将所有完整结果以JSON文件形式输出到用户目录
 3. 告诉用户文件已生成，并明确告知用户存放路径
+4. 总数为当前页的所有结果数量，而不是总结果数量
 
 ### Zeelin_Api_Key配置缺失提示
 
@@ -384,7 +385,7 @@ timestamp: ${timestamp}
    ```json
    {
      "Zeelin_Website_Url": "http://skills.zeelin.cn",
-     "Zeelin_Api_Url": "http://skills.zeelin.cn:5000/api/es/search/natural",
+     "Zeelin_Api_Url": "https://skills.zeelin.cn/v1/api/es/search/natural",
      "Zeelin_Api_Key": "在这里填入您的Zeelin_Api_Key"
    }
 ```
