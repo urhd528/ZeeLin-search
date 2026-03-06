@@ -20,8 +20,8 @@
 
 ```json
 {
-  "Zeelin_Website_Url": "https://www.zhiling.com",
-  "Zeelin_Api_Url": "http://127.0.0.1:5000/api/es/search/natural",
+  "Zeelin_Website_Url": "http://skills.zeelin.cn",
+  "Zeelin_Api_Url": "http://skills.zeelin.cn:5000/api/es/search/natural",
   "Zeelin_Api_Key": ""
 }
 ```
@@ -383,8 +383,8 @@ timestamp: ${timestamp}
    📝 在配置文件中找到"Zeelin_Api_Key"字段，将您的密钥填入引号中：
    ```json
    {
-     "Zeelin_Website_Url": "https://www.zhiling.com",
-     "Zeelin_Api_Url": "http://127.0.0.1:5000/api/es/search/natural",
+     "Zeelin_Website_Url": "http://skills.zeelin.cn",
+     "Zeelin_Api_Url": "http://skills.zeelin.cn:5000/api/es/search/natural",
      "Zeelin_Api_Key": "在这里填入您的Zeelin_Api_Key"
    }
 ```
